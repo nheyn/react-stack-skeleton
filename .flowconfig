@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/.*
+.*/lib/.*
+
+[include]
+
+[libs]
+flowlib/
+node_modules/iflow-react-router/index.js.flow
+node_modules/express-react-router/type.js
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowIssue
+suppress_comment= \\(.\\|\n\\)*\\$FlowSkip

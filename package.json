@@ -10,8 +10,18 @@
     "react-dom": "^15.3.2",
     "react-router": "^2.8.1"
   },
+  "devDependencies": {
+    "flow-bin": "^0.33.0",
+    "iflow-react-router": "^1.1.17",
+    "nsp": "^2.6.1"
+  },
   "scripts": {
+    "nsp": "nsp check",
+    "flow": "flow check",
+
+    "test": "npm run nsp && npm run flow",
     "server": "node ./lib/server.js",
+
     "start": "npm run server"
   },
   "engines": {

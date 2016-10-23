@@ -1,0 +1,20 @@
+{
+  "name": "react-stack-skeleton",
+  "version": "0.0.1",
+  "description": "A basic sekeleton site, for an isomorphic react web app.",
+  "author": "Nick Heyn <nick@heyn.io>",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-react-router": "^2.4.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1"
+  },
+  "scripts": {
+    "server": "node ./lib/server.js",
+    "start": "npm run server"
+  },
+  "engines": {
+    "node": "v6"
+  }
+}

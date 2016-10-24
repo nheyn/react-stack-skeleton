@@ -9,6 +9,7 @@ flowlib/
 node_modules/iflow-react-router/index.js.flow
 node_modules/async-dispatcher/type.js
 node_modules/express-react-router/type.js
+node_modules/react-async-dispatcher/type.js
 
 [options]
 suppress_comment= \\(.\\|\n\\)*\\$FlowIssue

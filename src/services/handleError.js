@@ -2,6 +2,7 @@
 import ReactDOM from 'react-dom/server';
 
 import HtmlPage from '../components/HtmlPage';
+import { PageWrapper } from '../components/pages';
 
 import type { Request, Response, NextFunction } from 'express';
 
@@ -23,12 +24,12 @@ export default function handleError(err?: Error, req: Request, res: Response, ne
   }
   else if(req.accepts('html')) {
     const reactHtml = ReactDOM.renderToStaticMarkup(
-      <div>
+      <PageWrapper>
         <h4>Error</h4>
         <hr />
         <label>{err.name}</label>
         <span>{err.message}</span>
-      </div>
+      </PageWrapper>
     );
 
     res.status(500).send(ReactDOM.renderToStaticMarkup(

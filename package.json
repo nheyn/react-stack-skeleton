@@ -4,7 +4,9 @@
   "description": "A basic sekeleton site, for an isomorphic react web app.",
   "author": "Nick Heyn <nick@heyn.io>",
   "dependencies": {
+    "async-dispatcher": "^0.1.0",
     "express": "^4.14.0",
+    "express-device": "^0.4.2",
     "express-react-router": "^2.4.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",

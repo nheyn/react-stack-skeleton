@@ -28,18 +28,21 @@
     "concurrently": "^2.2.0",
     "flow-bin": "^0.33.0",
     "iflow-react-router": "^1.1.17",
+    "jest-cli": "^16.0.2",
     "json-loader": "^0.5.4",
     "nsp": "^2.6.1",
+    "react-test-renderer": "^15.3.2",
     "webpack": "^1.13.2"
   },
   "scripts": {
     "nsp": "nsp check",
+    "jest": "jest",
     "flow": "flow check",
     "babel": "babel ./src -d ./lib",
     "webpack": "NODE_ENV=production webpack --optimize-minimize --display-modules",
     "webpack:watch": "webpack --debug --devtool inline-source-map --output-pathinfo --watch",
 
-    "test": "npm run nsp && npm run flow",
+    "test": "npm run nsp && npm run flow && npm run jest",
     "build": "npm run babel && npm run webpack",
     "server": "node ./lib/server.js",
     "server:watch": "babel-watch ./src/server.js",

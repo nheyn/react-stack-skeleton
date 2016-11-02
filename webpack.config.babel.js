@@ -15,7 +15,7 @@ export default {
       {
         test: /\.js$/,
         exclude: [
-          /(node_modules|lib|flowlib|public)/,
+          /(node_modules|lib|flowlib|public|__tests__)/,
           path.join(__dirname, './src/server.js'),
         ],
         loader: 'babel-loader',

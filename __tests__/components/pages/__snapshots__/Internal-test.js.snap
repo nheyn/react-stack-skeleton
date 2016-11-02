@@ -1,0 +1,5 @@
+exports[`test The Internal component displays another internal page. 1`] = `
+<div>
+  Internal Page
+</div>
+`;

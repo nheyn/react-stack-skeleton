@@ -1,0 +1,63 @@
+exports[`test The Header component displays the given menu component. 1`] = `
+<header
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 150,
+      "width": "100%",
+    }
+  }>
+  <h1
+    style={
+      Object {
+        "color": "white",
+        "left": 10,
+        "position": "absolute",
+        "top": 10,
+      }
+    } />
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "right": 10,
+        "top": 10,
+      }
+    }>
+    <div>
+      Test Menu
+    </div>
+  </div>
+</header>
+`;
+
+exports[`test The Header component displays the given title. 1`] = `
+<header
+  style={
+    Object {
+      "backgroundColor": "black",
+      "height": 150,
+      "width": "100%",
+    }
+  }>
+  <h1
+    style={
+      Object {
+        "color": "white",
+        "left": 10,
+        "position": "absolute",
+        "top": 10,
+      }
+    }>
+    Test Title
+  </h1>
+  <div
+    style={
+      Object {
+        "position": "absolute",
+        "right": 10,
+        "top": 10,
+      }
+    } />
+</header>
+`;

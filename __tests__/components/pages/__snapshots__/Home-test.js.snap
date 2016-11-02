@@ -1,0 +1,5 @@
+exports[`test The Home component displays the home page. 1`] = `
+<div>
+  Home Page
+</div>
+`;

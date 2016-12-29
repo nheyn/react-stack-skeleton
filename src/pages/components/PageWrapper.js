@@ -1,6 +1,8 @@
 /* @flow */
 import React from 'react';
 
+import { Header } from '../../core';
+
 type Props = {
   children?: any,
 };
@@ -11,7 +13,7 @@ type Props = {
 export default function PageWrapper({ children, ...otherProps }: Props): React.Element<*> {
   return (
     <div {...otherProps}>
-      <header>NYI: Header</header>
+      <Header />
       {children}
       <footer>NYI: Footer</footer>
     </div>

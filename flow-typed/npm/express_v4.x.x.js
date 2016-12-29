@@ -1,4 +1,7 @@
-import type { Server } from 'http';
+// flow-typed signature: c099894613b849a251fe2231073ba9d0
+// flow-typed version: d2849ed4c4/express_v4.x.x/flow_>=v0.25.x
+
+//import type { Server } from 'http';
 declare module 'express' {
   declare type RouterOptions = {
     caseSensitive?: boolean,
@@ -9,7 +12,7 @@ declare module 'express' {
     app: Application;
     get(field: string): string | void;
   }
-  declare class $Request extends http$IncomingMessage mixins RequestResponseBase {
+  declare class Request extends http$IncomingMessage mixins RequestResponseBase {
     baseUrl: string;
     body: mixed;
     cookies: {[cookie: string]: string};
@@ -59,7 +62,7 @@ declare module 'express' {
     headers?: {[name: string]: string},
     dotfiles?: 'allow' | 'deny' | 'ignore'
   };
-  declare class $Response extends http$ClientRequest mixins RequestResponseBase {
+  declare class Response extends http$ClientRequest mixins RequestResponseBase {
     headersSent: boolean;
     locals: {[name: string]: mixed};
     append(field: string, value?: string): this;
@@ -83,14 +86,12 @@ declare module 'express' {
     type(type: string): this;
     vary(field: string): this;
   }
-  declare type Response = $Response;
-  declare type Request = $Request;
+  declare type $Response = Response;
+  declare type $Request = Request;
   declare type NextFunction = (err?: ?Error) => mixed;
-  /*declare type Middleware =
+  declare type Middleware =
     ((req: Request, res: Response, next: NextFunction) => mixed) |
     ((error: ?Error, req : Request, res: Response, next: NextFunction) => mixed);
-  */
-  declare type Middleware = Function | Router;
   declare interface RouteMethodType<T> {
     (middleware: Middleware): T;
     (...middleware: Array<Middleware>): T;
@@ -100,6 +101,7 @@ declare module 'express' {
     (middleware: Middleware): T;
     (...middleware: Array<Middleware>): T;
     (path: string|RegExp|string[], ...middleware: Array<Middleware>): T;
+    (path: string, router: Router): T;
   }
   declare class Route {
     all: RouteMethodType<this>;
@@ -148,11 +150,11 @@ declare module 'express' {
     constructor(): void;
     locals: {[name: string]: mixed};
     mountpath: string;
-    listen(port: number, hostname?: string, backlog?: number, callback?: (err?: ?Error) => mixed): Server;
-    listen(port: number, hostname?: string, callback?: (err?: ?Error) => mixed): Server;
-    listen(port: number, callback?: (err?: ?Error) => mixed): Server;
-    listen(path: string, callback?: (err?: ?Error) => mixed): Server;
-    listen(handle: Object, callback?: (err?: ?Error) => mixed): Server;
+    listen(port: number, hostname?: string, backlog?: number, callback?: (err?: ?Error) => mixed): any; //: Server;
+    listen(port: number, hostname?: string, callback?: (err?: ?Error) => mixed): any; //: Server;
+    listen(port: number, callback?: (err?: ?Error) => mixed): any; //: Server;
+    listen(path: string, callback?: (err?: ?Error) => mixed): any; //: Server;
+    listen(handle: Object, callback?: (err?: ?Error) => mixed): any; //: Server;
     disable(name: string): void;
     disabled(name: string): boolean;
     enable(name: string): void;

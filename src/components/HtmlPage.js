@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import type { Request } from 'express';
+import type { $Request as Request } from 'express';
 
 type Props = {
   req: Request,

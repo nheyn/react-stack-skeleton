@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/server';
 import HtmlPage from '../components/HtmlPage';
 import { PageWrapper } from '../components/pages';
 
-import type { Request, Response, NextFunction } from 'express';
+import type { $Request as Request, $Response as Response, NextFunction } from 'express';
 
 export default function handleError(err?: Error, req: Request, res: Response, next: NextFunction): mixed {
   if(!err) {

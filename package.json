@@ -1,6 +1,6 @@
 {
   "name": "react-stack-skeleton",
-  "version": "0.0.2",
+  "version": "0.1.0-dev",
   "description": "A basic sekeleton site, for an isomorphic react web app.",
   "author": "Nick Heyn <nick@heyn.io>",
   "repository": {

@@ -1,0 +1,5 @@
+exports[`test it displays the "NYI" message. 1`] = `
+<footer>
+  NYI: Footer
+</footer>
+`;

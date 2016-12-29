@@ -1,0 +1,11 @@
+exports[`test it displays the header and footer around its children 1`] = `
+<div>
+  <header>
+    NYI: Header
+  </header>
+  Test Page Content
+  <footer>
+    NYI: Footer
+  </footer>
+</div>
+`;

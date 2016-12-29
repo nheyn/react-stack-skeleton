@@ -43,7 +43,7 @@
     "nsp": "nsp check",
     "jest": "jest",
     "flow": "flow check",
-    "babel": "babel ./src -d ./lib",
+    "babel": "babel ./src -d ./lib --ignore **/__tests__/**",
     "webpack": "NODE_ENV=production webpack --optimize-minimize --display-modules",
     "webpack:watch": "webpack --debug --devtool inline-source-map --output-pathinfo --watch",
 

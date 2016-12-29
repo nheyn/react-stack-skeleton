@@ -3,8 +3,6 @@ import path from 'path';
 import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import { PageWrapper, Home, Internal } from './components/pages';
-
 /*--------------------------------------------------------------------------------------------------------------------*/
 //  --- SITE MAP ---
 /*--------------------------------------------------------------------------------------------------------------------*/
@@ -16,9 +14,8 @@ const faviconSrc =    path.join(publicSrc, './favicon.ico');
 
 export default (
   <Router history={browserHistory}>
-    <Route path="/" component={PageWrapper}>
-      <IndexRoute component={Home} />
-      <Route path="internal" component={Internal} />
+    <Route path="/" component={(props) => <div {...props} />}>
+      <IndexRoute component={(props) => <div {...props}>Test Home</div>} />
     </Route>
 
     <Route path="/app.js" src={appSrc} />

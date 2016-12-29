@@ -7,8 +7,6 @@
 
 [libs]
 flow-typed/
-node_modules/async-dispatcher/type.js
 node_modules/express-react-router/type.js
-node_modules/react-async-dispatcher/type.js
 
 [options]

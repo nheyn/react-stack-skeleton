@@ -1,0 +1,15 @@
+version: '2'
+services:
+  dev:
+    build:
+      context: .
+      args:
+        node_env: dev
+    command: npm run dev
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/www/
+      - modules:/www/node_modules/
+volumes:
+  modules:

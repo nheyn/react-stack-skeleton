@@ -39,10 +39,10 @@ test('it displays "completed" link as selected when the filter is set to "comple
   expect(tree).toMatchSnapshot();
 });
 
-test('it calls the onClickClear function if the item is changed.', () => {
+test('it calls the onClickClearCompleted function if the item is changed.', () => {
   const onClickFn = jest.fn();
   const component = renderer.create(
-    <ListFooter onClickClear={onClickFn} />
+    <ListFooter onClickClearCompleted={onClickFn} />
   );
   const tree = component.toJSON();
   const clearButton = tree.children[2];

@@ -30,7 +30,7 @@ exports[`test it displays the "NYI" message. 1`] = `
         <div
           className="view">
           <input
-            checked={undefined}
+            checked={false}
             className="toggle"
             onChange={[Function]}
             type="checkbox" />
@@ -50,7 +50,7 @@ exports[`test it displays the "NYI" message. 1`] = `
         <div
           className="view">
           <input
-            checked={undefined}
+            checked={false}
             className="toggle"
             onChange={[Function]}
             type="checkbox" />

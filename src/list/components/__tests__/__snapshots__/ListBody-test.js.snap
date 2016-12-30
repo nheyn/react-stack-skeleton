@@ -1,0 +1,25 @@
+exports[`test it displays the children in the list. 1`] = `
+<section
+  className="main">
+  <input
+    className="toggle-all"
+    onChange={undefined}
+    type="checkbox" />
+  <label
+    htmlFor="toggle-all">
+    Mark all as complete
+  </label>
+  <ul
+    className="todo-list">
+    <li>
+      Test Item 0
+    </li>
+    <li>
+      Test Item 1
+    </li>
+    <li>
+      Test Item 2
+    </li>
+  </ul>
+</section>
+`;

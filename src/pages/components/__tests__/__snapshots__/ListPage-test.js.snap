@@ -17,20 +17,82 @@ exports[`test it displays the "NYI" message. 1`] = `
     className="main">
     <input
       className="toggle-all"
+      onChange={[Function]}
       type="checkbox" />
     <label
       htmlFor="toggle-all">
       Mark all as complete
     </label>
     <ul
-      className="todo-list" />
+      className="todo-list">
+      <li
+        className={undefined}>
+        <div
+          className="view">
+          <input
+            checked={undefined}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test label 0
+          </label>
+          <button
+            className="destroy" />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 0" />
+      </li>
+      <li
+        className={undefined}>
+        <div
+          className="view">
+          <input
+            checked={undefined}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test label 1
+          </label>
+          <button
+            className="destroy" />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 1" />
+      </li>
+      <li
+        className="completed">
+        <div
+          className="view">
+          <input
+            checked={true}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test label 2
+          </label>
+          <button
+            className="destroy" />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 2" />
+      </li>
+    </ul>
   </section>
   <footer
     className="footer">
     <span
       className="todo-count">
       <strong>
-        0
+        2
       </strong>
        item left
     </span>
@@ -65,7 +127,8 @@ exports[`test it displays the "NYI" message. 1`] = `
       </li>
     </ul>
     <button
-      className="clear-completed">
+      className="clear-completed"
+      onClick={[Function]}>
       Clear completed
     </button>
   </footer>

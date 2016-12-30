@@ -20,6 +20,7 @@ app.use(handleReactRouter(
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="icon/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" type="icon/x-icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css" />
       </head>
       <body onLoad={error? () => alert(error): undefined}>
         <div id="react-content" dangerouslySetInnerHTML={{ __html: reactHtml }} />

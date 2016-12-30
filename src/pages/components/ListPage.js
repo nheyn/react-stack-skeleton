@@ -18,7 +18,7 @@ export default function ListPage({ indexes, editingItemIndex, ...otherProps }: P
       <ListHeader />
       <ListBody>
       {indexes.map((itemIndex) =>
-        <ListItem itemId={itemIndex} editing={editingItemIndex === itemIndex} key={itemIndex} />
+        <ListItem itemIndex={itemIndex} editing={editingItemIndex === itemIndex} key={itemIndex} />
       )}
       </ListBody>
       <ListFooter />

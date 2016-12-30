@@ -1,17 +1,20 @@
 /* @flow */
 import { mapProps } from 'recompose';
 
-export default mapProps(({ itemId, ...otherProps }) => ({
+export default mapProps(({ itemIndex, ...otherProps }) => ({
   ...otherProps,
-  label: `Test label ${itemId}`,
-  value: `Test value ${itemId}`,
-  completed: itemId === 2,
+  value: `Test value ${itemIndex}`,
+  completed: itemIndex === 2,
   onChangeValue() {
     //TODO
-    console.log(`NYI: update test value ${itemId}`);
+    console.log(`NYI: update test value ${itemIndex}`);
   },
-  onSwitchStatus() {
+  onClickSwitchStatus() {
     //TODO
-    console.log(`NYI: switch status of ${itemId}`);
+    console.log(`NYI: switch status of ${itemIndex}`);
+  },
+  onClickDelete() {
+    //TODO
+    console.log(`NYI: delete item ${itemIndex}`);
   },
 }));

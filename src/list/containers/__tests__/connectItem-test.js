@@ -20,14 +20,25 @@ it('passes all the props added to its given Component.', () => {
   }
 });
 
-it('adds the item\'s value/label and wether or not the items is completed the given Component.', () => {
+it('removes the item id prop from the given Component.', () => {
+  const TestComponent = connectItem('div');
+  const component = renderer.create(
+    <TestComponent itemIndex={3} />
+  );
+  const { props } = component.toJSON();
+
+  //TODO, check if dispstach is called with the correct action
+  expect(props.itemIndex).toBeUndefined();
+});
+
+it('adds the value and wether or not the items is completed or editing the given Component.', () => {
   const TestComponent = connectItem('div');
   const component = renderer.create(
     <TestComponent />
   );
   const { props } = component.toJSON();
 
-  expect(props.label).toBeDefined();
+  //TODO, check if the correct values are pulled from the store
   expect(props.value).toBeDefined();
   expect(props.completed).toBeDefined();
 });
@@ -39,6 +50,7 @@ it('adds the onChange input function to the given Component.', () => {
   );
   const { props } = component.toJSON();
 
+  //TODO, check if dispstach is called with the correct action
   expect(props.onChangeValue).toBeDefined();
 });
 
@@ -49,16 +61,17 @@ it('adds the swap status function to the given Component.', () => {
   );
   const { props } = component.toJSON();
 
-  expect(props.onSwitchStatus).toBeDefined();
+  //TODO, check if dispstach is called with the correct action
+  expect(props.onClickSwitchStatus).toBeDefined();
 });
 
-
-it('removes the item id prop from the given Component.', () => {
+it('adds the delete item function to the given Component.', () => {
   const TestComponent = connectItem('div');
   const component = renderer.create(
-    <TestComponent itemId={3} />
+    <TestComponent />
   );
   const { props } = component.toJSON();
 
-  expect(props.itemId).toBeUndefined();
+  //TODO, check if dispstach is called with the correct action
+  expect(props.onClickDelete).toBeDefined();
 });

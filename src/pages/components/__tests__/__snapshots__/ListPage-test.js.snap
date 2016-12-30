@@ -26,7 +26,7 @@ exports[`test it displays the item with the editingItemIndex as editing. 1`] = `
     <ul
       className="todo-list">
       <li
-        className={undefined}>
+        className="">
         <div
           className="view">
           <input
@@ -35,10 +35,11 @@ exports[`test it displays the item with the editingItemIndex as editing. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 0
+            Test value 0
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"
@@ -46,7 +47,7 @@ exports[`test it displays the item with the editingItemIndex as editing. 1`] = `
           value="Test value 0" />
       </li>
       <li
-        className={undefined}>
+        className="editing">
         <div
           className="view">
           <input
@@ -55,10 +56,11 @@ exports[`test it displays the item with the editingItemIndex as editing. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 1
+            Test value 1
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"
@@ -75,10 +77,11 @@ exports[`test it displays the item with the editingItemIndex as editing. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 2
+            Test value 2
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"
@@ -163,7 +166,7 @@ exports[`test it displays the items given by the indexes array. 1`] = `
     <ul
       className="todo-list">
       <li
-        className={undefined}>
+        className="">
         <div
           className="view">
           <input
@@ -172,10 +175,11 @@ exports[`test it displays the items given by the indexes array. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 0
+            Test value 0
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"
@@ -183,7 +187,7 @@ exports[`test it displays the items given by the indexes array. 1`] = `
           value="Test value 0" />
       </li>
       <li
-        className={undefined}>
+        className="">
         <div
           className="view">
           <input
@@ -192,10 +196,11 @@ exports[`test it displays the items given by the indexes array. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 1
+            Test value 1
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"
@@ -212,10 +217,11 @@ exports[`test it displays the items given by the indexes array. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 2
+            Test value 2
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"

@@ -1,5 +1,136 @@
 exports[`test it displays the "NYI" message. 1`] = `
-<section>
-  NYI: TODO List
+<section
+  className="todoapp">
+  <header
+    className="header">
+    <h1>
+      todos
+    </h1>
+    <input
+      autoFocus={true}
+      className="new-todo"
+      onChange={[Function]}
+      placeholder="What needs to be done?"
+      value="" />
+  </header>
+  <section
+    className="main">
+    <input
+      className="toggle-all"
+      onChange={[Function]}
+      type="checkbox" />
+    <label
+      htmlFor="toggle-all">
+      Mark all as complete
+    </label>
+    <ul
+      className="todo-list">
+      <li
+        className={undefined}>
+        <div
+          className="view">
+          <input
+            checked={false}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test label 0
+          </label>
+          <button
+            className="destroy" />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 0" />
+      </li>
+      <li
+        className={undefined}>
+        <div
+          className="view">
+          <input
+            checked={false}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test label 1
+          </label>
+          <button
+            className="destroy" />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 1" />
+      </li>
+      <li
+        className="completed">
+        <div
+          className="view">
+          <input
+            checked={true}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test label 2
+          </label>
+          <button
+            className="destroy" />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 2" />
+      </li>
+    </ul>
+  </section>
+  <footer
+    className="footer">
+    <span
+      className="todo-count">
+      <strong>
+        2
+      </strong>
+       item left
+    </span>
+    <ul
+      className="filters">
+      <li>
+        <a
+          className="selected"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}>
+          All
+        </a>
+      </li>
+      <li>
+        <a
+          className={undefined}
+          href="/active"
+          onClick={[Function]}
+          style={Object {}}>
+          Active
+        </a>
+      </li>
+      <li>
+        <a
+          className={undefined}
+          href="/completed"
+          onClick={[Function]}
+          style={Object {}}>
+          Completed
+        </a>
+      </li>
+    </ul>
+    <button
+      className="clear-completed"
+      onClick={[Function]}>
+      Clear completed
+    </button>
+  </footer>
 </section>
 `;

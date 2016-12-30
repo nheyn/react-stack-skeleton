@@ -1,0 +1,14 @@
+exports[`test it displays the given value for the new item. 1`] = `
+<header
+  className="header">
+  <h1>
+    todos
+  </h1>
+  <input
+    autoFocus={true}
+    className="new-todo"
+    onChange={undefined}
+    placeholder="What needs to be done?"
+    value="Test Value" />
+</header>
+`;

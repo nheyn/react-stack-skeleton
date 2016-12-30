@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import PageWrapper from '../PageWrapper';
 
-test('it displays the header and footer around its children', () => {
+test('it displays footer bellow then children', () => {
   const component = renderer.create(
     <PageWrapper>
       Test Page Content

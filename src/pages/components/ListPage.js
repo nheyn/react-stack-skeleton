@@ -1,5 +1,8 @@
 /* @flow */
 import React from 'react';
+import { Link } from 'react-router';
+
+import { ListBody, ListFooter, ListHeader, ListItem } from '../../list';
 
 type Props = {
 
@@ -10,8 +13,14 @@ type Props = {
  */
 export default function ListPage({ ...otherProps }: Props): React.Element<*> {
   return (
-    <section {...otherProps}>
-      NYI: TODO List
+    <section className="todoapp">
+      <ListHeader />
+      <ListBody>
+        <ListItem itemId={0} />
+        <ListItem itemId={1} />
+        <ListItem itemId={2} />
+      </ListBody>
+      <ListFooter />
     </section>
   );
 }

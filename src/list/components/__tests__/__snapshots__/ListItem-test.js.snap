@@ -1,0 +1,64 @@
+exports[`test it displays the given label and value for the item. 1`] = `
+<li
+  className={undefined}>
+  <div
+    className="view">
+    <input
+      checked={undefined}
+      className="toggle"
+      onChange={undefined}
+      type="checkbox" />
+    <label>
+      Test Label
+    </label>
+    <button
+      className="destroy" />
+  </div>
+  <input
+    className="edit"
+    onChange={undefined}
+    value="Test Value" />
+</li>
+`;
+
+exports[`test it shows the input as checked if the item is completed. 1`] = `
+<li
+  className="completed">
+  <div
+    className="view">
+    <input
+      checked={true}
+      className="toggle"
+      onChange={undefined}
+      type="checkbox" />
+    <label />
+    <button
+      className="destroy" />
+  </div>
+  <input
+    className="edit"
+    onChange={undefined}
+    value={undefined} />
+</li>
+`;
+
+exports[`test it shows the input as un-checked if the item is not completed. 1`] = `
+<li
+  className={undefined}>
+  <div
+    className="view">
+    <input
+      checked={undefined}
+      className="toggle"
+      onChange={undefined}
+      type="checkbox" />
+    <label />
+    <button
+      className="destroy" />
+  </div>
+  <input
+    className="edit"
+    onChange={undefined}
+    value={undefined} />
+</li>
+`;

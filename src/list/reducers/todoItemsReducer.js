@@ -1,7 +1,7 @@
 /* @flow */
 import { TODO_ITEMS_ADD } from '../actions/addTodoItemAction';
 
-type State = {
+export type State = {
   editingItemIndex: ?number,
   items: Array<{
     value: string,

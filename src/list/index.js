@@ -8,17 +8,14 @@ import connectCompleteAll from './containers/connectCompleteAll';
 import connectItem from './containers/connectItem';
 import connectNewItem from './containers/connectNewItem';
 import connectRemainingItemsInfo from './containers/connectRemainingItemsInfo';
+import connectTodoListIndexes from './containers/connectTodoListIndexes';
 
-import todoItemsReducer, { TODO_ITEMS_REDUCER } from './reducers/todoItemsReducer';
+import reducers from './reducers';
 
 const ConnectedListBody = connectCompleteAll(ListBody);
 const ConnectedListFooter = connectRemainingItemsInfo(ListFooter);
 const ConnectedListHeader = connectNewItem(ListHeader);
 const ConnectedListItem = connectItem(ListItem);
-
-const reducers = {
-  [TODO_ITEMS_REDUCER]: todoItemsReducer,
-};
 
 export {
   ConnectedListBody as ListBody,
@@ -26,4 +23,5 @@ export {
   ConnectedListHeader as ListHeader,
   ConnectedListItem as ListItem,
   reducers,
+  connectTodoListIndexes,
 };

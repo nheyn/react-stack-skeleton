@@ -3,7 +3,7 @@ import React from 'react';
 
 type Props = {
   newItemValue: string,
-  onChangeNewItem: (e: SyntheticEvent) => void,
+  onChangeNewItem: (e: SyntheticInputEvent) => void,
 };
 
 /**

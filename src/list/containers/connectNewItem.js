@@ -1,11 +1,17 @@
 /* @flow */
-import { mapProps } from 'recompose';
+import { compose, mapProps, withReducer } from 'recompose';
 
-export default mapProps((props) => ({
-  ...props,
-  newItemValue: '',
-  onChangeNewItem() {
-    //TODO,
-    console.log('NYI: change new item value');
-  },
-}));
+import newItemReducer from '../reducers/newItemReducer';
+import updateNewItemAction from '../actions/updateNewItemAction';
+
+export default compose(
+  withReducer('newItemValue', 'dispatchNewItemReducer', newItemReducer, newItemReducer(undefined, {})),
+  mapProps(({ dispatchNewItemReducer, ...otherProps }) => ({
+    ...otherProps,
+    onChangeNewItem(e: SyntheticInputEvent) {
+      const { value } = e.target;
+
+      dispatchNewItemReducer(updateNewItemAction(value));
+    },
+  })),
+);

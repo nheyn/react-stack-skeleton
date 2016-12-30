@@ -5,8 +5,8 @@ type Props = {
   label: string,
   value: string,
   completed?: bool,
-  onChangeValue: (e: SyntheticEvent) => void,
-  onSwitchStatus: (e: SyntheticEvent) => void,
+  onChangeValue: (e: SyntheticInputEvent) => void,
+  onSwitchStatus: (e: SyntheticInputEvent) => void,
 };
 
 /**

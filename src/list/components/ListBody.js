@@ -2,7 +2,7 @@
 import React from 'react';
 
 type Props = {
-  onClickCompleteAllItems: (e: SyntheticEvent) => void,
+  onClickCompleteAllItems: (e: SyntheticInputEvent) => void,
   children?: any,
 };
 

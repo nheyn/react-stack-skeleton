@@ -1,7 +1,7 @@
 /* @flow */
 import React from 'react';
 
-import { Header, Footer } from '../../core';
+import { Footer } from '../../core';
 
 type Props = {
   children?: any,
@@ -13,10 +13,7 @@ type Props = {
 export default function PageWrapper({ children, ...otherProps }: Props): React.Element<*> {
   return (
     <div {...otherProps}>
-      <section className="todoapp">
-        <Header />
-        {children}
-      </section>
+      {children}
       <Footer />
     </div>
   );

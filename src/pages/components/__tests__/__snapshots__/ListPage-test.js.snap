@@ -1,5 +1,73 @@
 exports[`test it displays the "NYI" message. 1`] = `
-<section>
-  NYI: TODO List
+<section
+  className="todoapp">
+  <header
+    className="header">
+    <h1>
+      todos
+    </h1>
+    <input
+      autoFocus={true}
+      className="new-todo"
+      onChange={[Function]}
+      placeholder="What needs to be done?"
+      value="" />
+  </header>
+  <section
+    className="main">
+    <input
+      className="toggle-all"
+      type="checkbox" />
+    <label
+      htmlFor="toggle-all">
+      Mark all as complete
+    </label>
+    <ul
+      className="todo-list" />
+  </section>
+  <footer
+    className="footer">
+    <span
+      className="todo-count">
+      <strong>
+        0
+      </strong>
+       item left
+    </span>
+    <ul
+      className="filters">
+      <li>
+        <a
+          className="selected"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}>
+          All
+        </a>
+      </li>
+      <li>
+        <a
+          className={undefined}
+          href="/active"
+          onClick={[Function]}
+          style={Object {}}>
+          Active
+        </a>
+      </li>
+      <li>
+        <a
+          className={undefined}
+          href="/completed"
+          onClick={[Function]}
+          style={Object {}}>
+          Completed
+        </a>
+      </li>
+    </ul>
+    <button
+      className="clear-completed">
+      Clear completed
+    </button>
+  </footer>
 </section>
 `;

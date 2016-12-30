@@ -42,6 +42,8 @@
   "scripts": {
     "nsp": "nsp check",
     "jest": "jest",
+    "jest:onlyChanged": "jest --onlyChanged",
+    "jest:updateSnapshot": "jest --updateSnapshot",
     "flow": "flow check",
     "babel": "babel ./src -d ./lib --ignore **/__tests__/**",
     "webpack": "NODE_ENV=production webpack --optimize-minimize --display-modules",

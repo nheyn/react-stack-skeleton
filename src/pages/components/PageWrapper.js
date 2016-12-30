@@ -13,8 +13,10 @@ type Props = {
 export default function PageWrapper({ children, ...otherProps }: Props): React.Element<*> {
   return (
     <div {...otherProps}>
-      <Header />
-      {children}
+      <section className="todoapp">
+        <Header />
+        {children}
+      </section>
       <Footer />
     </div>
   );

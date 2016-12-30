@@ -1,9 +1,12 @@
 exports[`test it displays the header and footer around its children 1`] = `
 <div>
-  <header>
-    NYI: Header
-  </header>
-  Test Page Content
+  <section
+    className="todoapp">
+    <header>
+      NYI: Header
+    </header>
+    Test Page Content
+  </section>
   <footer>
     NYI: Footer
   </footer>

@@ -17,9 +17,9 @@ export default function ListPage({ indexes, editingItemIndex, ...otherProps }: P
     <section className="todoapp">
       <ListHeader />
       <ListBody>
-        <ListItem itemId={0} />
-        <ListItem itemId={1} />
-        <ListItem itemId={2} />
+      {indexes.map((itemIndex) =>
+        <ListItem itemId={itemIndex} editing={editingItemIndex === itemIndex} key={itemIndex} />
+      )}
       </ListBody>
       <ListFooter />
     </section>

@@ -27,15 +27,29 @@ it('adds the value of new item input to the given Component.', () => {
   );
   const { props } = component.toJSON();
 
+  //TODO, check if items are correctly pulled from the reducer
   expect(props.newItemValue).toBeDefined();
 });
 
-it('adds the onChange input function to the given Component.', () => {
+it('adds the onChangeNewItem input function to the given Component.', () => {
   const TestComponent = connectNewItem('div');
   const component = renderer.create(
     <TestComponent />
   );
   const { props } = component.toJSON();
 
+  //TODO, check if the reducer's dispach is called
   expect(props.onChangeNewItem).toBeDefined();
+});
+
+
+it('adds the onCreateNewItem input function to the given Component.', () => {
+  const TestComponent = connectNewItem('div');
+  const component = renderer.create(
+    <TestComponent />
+  );
+  const { props } = component.toJSON();
+
+  //TODO, check if the redux store's dispach is called
+  expect(props.onCreateNewItem).toBeDefined();
 });

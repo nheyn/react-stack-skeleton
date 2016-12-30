@@ -10,6 +10,7 @@ exports[`test it displays the item with the editingItemIndex as editing. 1`] = `
       autoFocus={true}
       className="new-todo"
       onChange={[Function]}
+      onKeyDown={[Function]}
       placeholder="What needs to be done?"
       value="" />
   </header>
@@ -150,6 +151,7 @@ exports[`test it displays the items given by the indexes array. 1`] = `
       autoFocus={true}
       className="new-todo"
       onChange={[Function]}
+      onKeyDown={[Function]}
       placeholder="What needs to be done?"
       value="" />
   </header>

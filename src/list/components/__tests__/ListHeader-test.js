@@ -23,3 +23,19 @@ test('it calls the onChangeNewItem function if the item is changed.', () => {
   newItemInput.props.onChange();
   expect(onChangeFn).toHaveBeenCalledTimes(1);
 });
+
+test('it calls the onCreateNewItem function if the enter key is clicked.', () => {
+  const onKeyDownFn = jest.fn();
+  const component = renderer.create(
+    <ListHeader onCreateNewItem={onKeyDownFn} />
+  );
+  const tree = component.toJSON();
+  const newItemInput = tree.children[1];
+
+  newItemInput.props.onKeyDown({ keyCode: 1 }); // not Enter key
+  newItemInput.props.onKeyDown({ keyCode: 2 }); // not Enter key
+  newItemInput.props.onKeyDown({ keyCode: 13 }); // Enter key
+  newItemInput.props.onKeyDown({ keyCode: 4 }); // not Enter key
+  newItemInput.props.onKeyDown({ keyCode: 13 }); // Enter key
+  expect(onKeyDownFn).toHaveBeenCalledTimes(2);
+});

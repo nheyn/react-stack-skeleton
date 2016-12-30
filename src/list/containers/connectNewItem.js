@@ -13,5 +13,9 @@ export default compose(
 
       dispatchNewItemReducer(updateNewItemAction(value));
     },
+    onCreateNewItem(e: SyntheticInputEvent) {
+      //TODO
+      console.log('NYI: create new item');
+    }
   })),
 );

@@ -1,8 +1,5 @@
 /* @flow */
 import React from 'react';
-import { Provider } from 'react-redux';
-
-import store from '../../store';
 import { Footer } from '../../core';
 
 type Props = {
@@ -14,11 +11,9 @@ type Props = {
  */
 export default function PageWrapper({ children, ...otherProps }: Props): React.Element<*> {
   return (
-    <Provider store={store} {...otherProps}>
-      <div>
-        {children}
-        <Footer />
-      </div>
-    </Provider>
+    <div {...otherProps}>
+      {children}
+      <Footer />
+    </div>
   );
 }

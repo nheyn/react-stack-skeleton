@@ -1,11 +1,18 @@
 /* @flow */
-import { mapProps } from 'recompose';
+import { connect } from 'react-redux';
+import { compose, mapProps } from 'recompose';
 
-export default mapProps((props) => ({
-  ...props,
-  activeItemsLeft: 2,
-  onClickClearCompleted() {
-    //TODO
-    console.log('NYI, clear completed items');
-  },
-}));
+import { getNumberOfActiveItems } from '../selectors';
+
+export default compose(
+  connect((state) => ({
+    activeItemsLeft: getNumberOfActiveItems(state),
+  })),
+  mapProps(({ dispatch, ...otherProps }) => ({
+    ...otherProps,
+    onClickClearCompleted() {
+      //TODO
+      console.log('NYI, clear completed items');
+    },
+  })),
+);

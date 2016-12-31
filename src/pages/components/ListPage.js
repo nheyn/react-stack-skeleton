@@ -13,15 +13,23 @@ type Props = {
  * A page that display the todo list.
  */
 export default function ListPage({ indexes, editingItemIndex, ...otherProps }: Props): React.Element<*> {
+  const hasTodos = indexes.length > 0;
+
   return (
     <section className="todoapp">
       <ListHeader />
+    {hasTodos?
       <ListBody>
       {indexes.map((itemIndex) =>
         <ListItem itemIndex={itemIndex} editing={editingItemIndex === itemIndex} key={itemIndex} />
       )}
-      </ListBody>
-      <ListFooter />
+      </ListBody>:
+      null
+    }
+    {hasTodos?
+      <ListFooter />:
+      null
+    }
     </section>
   );
 }

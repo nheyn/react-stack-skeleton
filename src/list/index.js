@@ -8,7 +8,10 @@ import connectCompleteAll from './containers/connectCompleteAll';
 import connectItem from './containers/connectItem';
 import connectNewItem from './containers/connectNewItem';
 import connectRemainingItemsInfo from './containers/connectRemainingItemsInfo';
-import connectTodoListIndexes from './containers/connectTodoListIndexes';
+import connectTodoListIndexes, {
+  connectActiveTodoListIndexes,
+  connectCompletedTodoListIndexes,
+} from './containers/connectTodoListIndexes';
 
 import reducers from './reducers';
 
@@ -24,4 +27,6 @@ export {
   ConnectedListItem as ListItem,
   reducers,
   connectTodoListIndexes,
+  connectActiveTodoListIndexes,
+  connectCompletedTodoListIndexes,
 };

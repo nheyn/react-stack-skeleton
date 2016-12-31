@@ -19,13 +19,13 @@ export default function ListFooter(props: Props): React.Element<*> {
       <span className="todo-count"><strong>{activeItemsLeft}</strong> item left</span>
       <ul className="filters">
         <li>
-          <Link className={filter? undefined: 'selected'} href="/">All</Link>
+          <Link className={undefined/*filter? undefined: 'selected'*/} to="/">All</Link>
         </li>
         <li>
-          <Link className={filter === 'active'? 'selected': undefined} href="/active">Active</Link>
+          <Link className={undefined/*filter === 'active'? 'selected': undefined*/} to="/active">Active</Link>
         </li>
         <li>
-          <Link className={filter === 'completed'? 'selected': undefined} href="/completed">Completed</Link>
+          <Link className={undefined/*filter === 'completed'? 'selected': undefined*/} to="/completed">Completed</Link>
         </li>
       </ul>
       <button className="clear-completed" onClick={onClickClearCompleted}>

@@ -11,7 +11,6 @@ exports[`test it displays "active" link as selected when the filter is set to "a
     <li>
       <a
         className={undefined}
-        href="/"
         onClick={[Function]}
         style={Object {}}>
         All
@@ -19,8 +18,7 @@ exports[`test it displays "active" link as selected when the filter is set to "a
     </li>
     <li>
       <a
-        className="selected"
-        href="/active"
+        className={undefined}
         onClick={[Function]}
         style={Object {}}>
         Active
@@ -29,7 +27,6 @@ exports[`test it displays "active" link as selected when the filter is set to "a
     <li>
       <a
         className={undefined}
-        href="/completed"
         onClick={[Function]}
         style={Object {}}>
         Completed
@@ -56,8 +53,7 @@ exports[`test it displays "all" link as selected when not filter is given. 1`] =
     className="filters">
     <li>
       <a
-        className="selected"
-        href="/"
+        className={undefined}
         onClick={[Function]}
         style={Object {}}>
         All
@@ -66,7 +62,6 @@ exports[`test it displays "all" link as selected when not filter is given. 1`] =
     <li>
       <a
         className={undefined}
-        href="/active"
         onClick={[Function]}
         style={Object {}}>
         Active
@@ -75,7 +70,6 @@ exports[`test it displays "all" link as selected when not filter is given. 1`] =
     <li>
       <a
         className={undefined}
-        href="/completed"
         onClick={[Function]}
         style={Object {}}>
         Completed
@@ -103,7 +97,6 @@ exports[`test it displays "completed" link as selected when the filter is set to
     <li>
       <a
         className={undefined}
-        href="/"
         onClick={[Function]}
         style={Object {}}>
         All
@@ -112,7 +105,6 @@ exports[`test it displays "completed" link as selected when the filter is set to
     <li>
       <a
         className={undefined}
-        href="/active"
         onClick={[Function]}
         style={Object {}}>
         Active
@@ -120,8 +112,7 @@ exports[`test it displays "completed" link as selected when the filter is set to
     </li>
     <li>
       <a
-        className="selected"
-        href="/completed"
+        className={undefined}
         onClick={[Function]}
         style={Object {}}>
         Completed
@@ -150,8 +141,7 @@ exports[`test it displays the given number of remaining items. 1`] = `
     className="filters">
     <li>
       <a
-        className="selected"
-        href="/"
+        className={undefined}
         onClick={[Function]}
         style={Object {}}>
         All
@@ -160,7 +150,6 @@ exports[`test it displays the given number of remaining items. 1`] = `
     <li>
       <a
         className={undefined}
-        href="/active"
         onClick={[Function]}
         style={Object {}}>
         Active
@@ -169,7 +158,6 @@ exports[`test it displays the given number of remaining items. 1`] = `
     <li>
       <a
         className={undefined}
-        href="/completed"
         onClick={[Function]}
         style={Object {}}>
         Completed

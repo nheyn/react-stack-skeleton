@@ -1,4 +1,4 @@
-exports[`test it displays the "NYI" message. 1`] = `
+exports[`test it displays the item with the editingItemIndex as editing. 1`] = `
 <section
   className="todoapp">
   <header
@@ -10,6 +10,7 @@ exports[`test it displays the "NYI" message. 1`] = `
       autoFocus={true}
       className="new-todo"
       onChange={[Function]}
+      onKeyDown={[Function]}
       placeholder="What needs to be done?"
       value="" />
   </header>
@@ -26,7 +27,7 @@ exports[`test it displays the "NYI" message. 1`] = `
     <ul
       className="todo-list">
       <li
-        className={undefined}>
+        className="">
         <div
           className="view">
           <input
@@ -35,10 +36,11 @@ exports[`test it displays the "NYI" message. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 0
+            Test value 0
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"
@@ -46,7 +48,7 @@ exports[`test it displays the "NYI" message. 1`] = `
           value="Test value 0" />
       </li>
       <li
-        className={undefined}>
+        className="editing">
         <div
           className="view">
           <input
@@ -55,10 +57,11 @@ exports[`test it displays the "NYI" message. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 1
+            Test value 1
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"
@@ -75,10 +78,152 @@ exports[`test it displays the "NYI" message. 1`] = `
             onChange={[Function]}
             type="checkbox" />
           <label>
-            Test label 2
+            Test value 2
           </label>
           <button
-            className="destroy" />
+            className="destroy"
+            onClick={[Function]} />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 2" />
+      </li>
+    </ul>
+  </section>
+  <footer
+    className="footer">
+    <span
+      className="todo-count">
+      <strong>
+        2
+      </strong>
+       item left
+    </span>
+    <ul
+      className="filters">
+      <li>
+        <a
+          className="selected"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}>
+          All
+        </a>
+      </li>
+      <li>
+        <a
+          className={undefined}
+          href="/active"
+          onClick={[Function]}
+          style={Object {}}>
+          Active
+        </a>
+      </li>
+      <li>
+        <a
+          className={undefined}
+          href="/completed"
+          onClick={[Function]}
+          style={Object {}}>
+          Completed
+        </a>
+      </li>
+    </ul>
+    <button
+      className="clear-completed"
+      onClick={[Function]}>
+      Clear completed
+    </button>
+  </footer>
+</section>
+`;
+
+exports[`test it displays the items given by the indexes array. 1`] = `
+<section
+  className="todoapp">
+  <header
+    className="header">
+    <h1>
+      todos
+    </h1>
+    <input
+      autoFocus={true}
+      className="new-todo"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="What needs to be done?"
+      value="" />
+  </header>
+  <section
+    className="main">
+    <input
+      className="toggle-all"
+      onChange={[Function]}
+      type="checkbox" />
+    <label
+      htmlFor="toggle-all">
+      Mark all as complete
+    </label>
+    <ul
+      className="todo-list">
+      <li
+        className="">
+        <div
+          className="view">
+          <input
+            checked={false}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test value 0
+          </label>
+          <button
+            className="destroy"
+            onClick={[Function]} />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 0" />
+      </li>
+      <li
+        className="">
+        <div
+          className="view">
+          <input
+            checked={false}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test value 1
+          </label>
+          <button
+            className="destroy"
+            onClick={[Function]} />
+        </div>
+        <input
+          className="edit"
+          onChange={[Function]}
+          value="Test value 1" />
+      </li>
+      <li
+        className="completed">
+        <div
+          className="view">
+          <input
+            checked={true}
+            className="toggle"
+            onChange={[Function]}
+            type="checkbox" />
+          <label>
+            Test value 2
+          </label>
+          <button
+            className="destroy"
+            onClick={[Function]} />
         </div>
         <input
           className="edit"

@@ -1,6 +1,6 @@
-exports[`test it displays the given label and value for the item. 1`] = `
+exports[`test it displays the given value in the label and input for the item. 1`] = `
 <li
-  className={undefined}>
+  className="">
   <div
     className="view">
     <input
@@ -9,10 +9,11 @@ exports[`test it displays the given label and value for the item. 1`] = `
       onChange={undefined}
       type="checkbox" />
     <label>
-      Test Label
+      Test Value
     </label>
     <button
-      className="destroy" />
+      className="destroy"
+      onClick={undefined} />
   </div>
   <input
     className="edit"
@@ -33,7 +34,8 @@ exports[`test it shows the input as checked if the item is completed. 1`] = `
       type="checkbox" />
     <label />
     <button
-      className="destroy" />
+      className="destroy"
+      onClick={undefined} />
   </div>
   <input
     className="edit"
@@ -44,7 +46,7 @@ exports[`test it shows the input as checked if the item is completed. 1`] = `
 
 exports[`test it shows the input as un-checked if the item is not completed. 1`] = `
 <li
-  className={undefined}>
+  className="">
   <div
     className="view">
     <input
@@ -54,7 +56,30 @@ exports[`test it shows the input as un-checked if the item is not completed. 1`]
       type="checkbox" />
     <label />
     <button
-      className="destroy" />
+      className="destroy"
+      onClick={undefined} />
+  </div>
+  <input
+    className="edit"
+    onChange={undefined}
+    value={undefined} />
+</li>
+`;
+
+exports[`test it shows the items in editing mode if the item has editing prop set. 1`] = `
+<li
+  className="editing">
+  <div
+    className="view">
+    <input
+      checked={undefined}
+      className="toggle"
+      onChange={undefined}
+      type="checkbox" />
+    <label />
+    <button
+      className="destroy"
+      onClick={undefined} />
   </div>
   <input
     className="edit"

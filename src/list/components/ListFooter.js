@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 type Props = {
   activeItemsLeft: number,
   filter?: 'active' | 'completed',
-  onClickClearCompleted: (e: SyntheticEvent) => void,
+  onClickClearCompleted: (e: SyntheticInputEvent) => void,
 };
 
 /**

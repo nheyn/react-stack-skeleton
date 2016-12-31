@@ -2,25 +2,26 @@
 import React from 'react';
 
 type Props = {
-  label: string,
   value: string,
   completed?: bool,
-  onChangeValue: (e: SyntheticEvent) => void,
-  onSwitchStatus: (e: SyntheticEvent) => void,
+  editing?: bool,
+  onChangeValue: (e: SyntheticInputEvent) => void,
+  onClickSwitchStatus: (e: SyntheticInputEvent) => void,
+  onClickDelete: (e: SyntheticEvent) => void,
 };
 
 /**
  * An item in the todo list.
  */
 export default function ListItem(props: Props): React.Element<*> {
-  const { label, value, completed, onChangeValue, onSwitchStatus, ...otherProps } = props;
+  const { value, completed, editing, onChangeValue, onClickSwitchStatus, onClickDelete, ...otherProps } = props;
 
   return (
-    <li className={completed? "completed": undefined}>
+    <li className={[completed? 'completed': null, editing? 'editing': null ].filter((str) => !!str).join(' ')}>
       <div className="view">
-        <input className="toggle" type="checkbox" checked={completed} onChange={onSwitchStatus} />
-        <label>{label}</label>
-        <button className="destroy"></button>
+        <input className="toggle" type="checkbox" checked={completed} onChange={onClickSwitchStatus} />
+        <label>{value}</label>
+        <button className="destroy" onClick={onClickDelete}></button>
       </div>
       <input className="edit" value={value} onChange={onChangeValue} />
     </li>

@@ -1,17 +1,30 @@
 /* @flow */
-import { mapProps } from 'recompose';
+import { connect } from 'react-redux';
+import { compose, mapProps } from 'recompose';
 
-export default mapProps(({ itemId, ...otherProps }) => ({
-  ...otherProps,
-  label: `Test label ${itemId}`,
-  value: `Test value ${itemId}`,
-  completed: itemId === 2,
-  onChangeValue() {
-    //TODO
-    console.log(`NYI: update test value ${itemId}`);
-  },
-  onSwitchStatus() {
-    //TODO
-    console.log(`NYI: switch status of ${itemId}`);
-  },
-}));
+import setItemAsActiveAction from '../actions/setItemAsActiveAction';
+import setItemAsCompletedAction from '../actions/setItemAsCompletedAction';
+import { getItemByIndex } from '../selectors';
+
+export default compose(
+  connect((state) => ({ state })),
+  mapProps(({ itemIndex, state, dispatch, ...otherProps }) => {
+    const currItem = getItemByIndex(state, itemIndex);
+    return {
+      ...currItem,
+      onChangeValue() {
+        //TODO
+        console.log(`NYI: update test value ${itemIndex}`);
+      },
+      onClickSwitchStatus() {
+        if(currItem.completed)  dispatch(setItemAsActiveAction(itemIndex));
+        else                    dispatch(setItemAsCompletedAction(itemIndex));
+      },
+      onClickDelete() {
+        //TODO
+        console.log(`NYI: delete item ${itemIndex}`);
+      },
+      ...otherProps,
+    };
+  }),
+);

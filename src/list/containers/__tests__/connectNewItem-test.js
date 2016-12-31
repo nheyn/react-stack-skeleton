@@ -1,7 +1,17 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
+import configureMockStore from 'redux-mock-store';
 
 import connectNewItem from '../connectNewItem';
+
+function newMockStore(todoItemsState: Object = {}): * {
+  const mockStore = configureMockStore([]);
+  const defaultState = { };
+
+  return mockStore({ ...defaultState, ...todoItemsState  });
+}
+jest.mock('../../reducers/newItemReducer');
 
 it('passes all the props added to its given Component.', () => {
   const mockProps = {
@@ -11,7 +21,9 @@ it('passes all the props added to its given Component.', () => {
   };
   const TestComponent = connectNewItem('div');
   const component = renderer.create(
-    <TestComponent {...mockProps} />
+    <Provider store={newMockStore()}>
+      <TestComponent {...mockProps} />
+    </Provider>
   );
   const { props } = component.toJSON();
 
@@ -21,20 +33,28 @@ it('passes all the props added to its given Component.', () => {
 });
 
 it('adds the value of new item input to the given Component.', () => {
+  const mockNewItemValue = 'Test new item value';
+  const { default: mockReducer } = require('../../reducers/newItemReducer');
+  mockReducer.mockReset();
+  mockReducer.mockReturnValue(mockNewItemValue);
+
   const TestComponent = connectNewItem('div');
   const component = renderer.create(
-    <TestComponent />
+    <Provider store={newMockStore()}>
+      <TestComponent />
+    </Provider>
   );
   const { props } = component.toJSON();
 
-  //TODO, check if items are correctly pulled from the reducer
-  expect(props.newItemValue).toBeDefined();
+  expect(props.newItemValue).toEqual(mockNewItemValue);
 });
 
 it('adds the onChangeNewItem input function to the given Component.', () => {
   const TestComponent = connectNewItem('div');
   const component = renderer.create(
-    <TestComponent />
+    <Provider store={newMockStore()}>
+      <TestComponent />
+    </Provider>
   );
   const { props } = component.toJSON();
 
@@ -42,11 +62,12 @@ it('adds the onChangeNewItem input function to the given Component.', () => {
   expect(props.onChangeNewItem).toBeDefined();
 });
 
-
 it('adds the onCreateNewItem input function to the given Component.', () => {
   const TestComponent = connectNewItem('div');
   const component = renderer.create(
-    <TestComponent />
+    <Provider store={newMockStore()}>
+      <TestComponent />
+    </Provider>
   );
   const { props } = component.toJSON();
 
